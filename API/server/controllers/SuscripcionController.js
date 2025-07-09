@@ -34,6 +34,8 @@ class SuscripcionController {
     try {
       const { id_usuario, id_curso } = req.query;
 
+      console.log("Query recibida:", id_usuario, id_curso);
+
       if (!id_usuario || !id_curso) {
         return res.status(400).json({ error: 'Faltan parámetros: id_usuario o id_curso' });
       }
@@ -45,6 +47,7 @@ class SuscripcionController {
 
       res.json(resultado);
     } catch (error) {
+      console.error("Error consultando suscripción:", error.message);
       res.status(404).json({ error: error.message });
     }
   }

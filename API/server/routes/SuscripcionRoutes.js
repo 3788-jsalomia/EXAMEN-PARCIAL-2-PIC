@@ -4,6 +4,6 @@ const SuscripcionController = require('../controllers/SuscripcionController');
 
 router.post('/suscripciones', SuscripcionController.crearSuscripcion);
 router.delete('/suscripciones/:id', SuscripcionController.cancelarSuscripcion);
-router.get('/suscripciones/:id', SuscripcionController.consultarSuscripcion);
+router.get('/suscripciones/', SuscripcionController.consultarSuscripcion);
 
 module.exports = router;
