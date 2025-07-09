@@ -1,0 +1,36 @@
+
+////Curso///////
+
+(Get)http://localhost:3000/api/cursos
+(POST)http://localhost:3000/api/usuarios/login
+(POST)http://localhost:3000/api/cursos/create
+
+(Get)
+(Put)
+(Delete)
+
+////Usuario///////
+
+(Get)http://localhost:3000/api/usuarios
+(POST)
+(Get)
+(Put)
+(Delete)
+
+////Suscriptores///////
+
+(Get)
+(POST)http://localhost:3000/api/suscripciones/create
+{
+  "id_usuario": 3,
+  "id_curso": 1
+}
+
+(Get)
+(Put)
+(Delete)http://localhost:3000/api/suscripciones/cancelar
+
+{
+  "id_usuario": 3,
+  "id_curso": 1
+}
