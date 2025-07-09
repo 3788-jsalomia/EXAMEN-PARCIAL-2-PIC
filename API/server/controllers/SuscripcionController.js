@@ -11,7 +11,7 @@ class SuscripcionController {
       if (!id_usuario || !id_curso || id_usuario <= 0 || id_curso <= 0) {
         return res.status(400).json({ error: 'ID de usuario o curso inválido' });
       }
-      console.log("Suscribiendo con:", idUsuario, idCurso);
+      console.log("Suscribiendo con:", id_usuario, id_curso);
 
       const nueva = await Suscripcion.crear({ id_usuario, id_curso });
       res.status(201).json(nueva);

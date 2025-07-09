@@ -71,7 +71,7 @@ export const SubForm: React.FC<Props> = ({ initialData = {}, cursos, onSubmit, c
             return;
         }
         onSubmit(form);
-        setForm({ id_curso: 0, id_usuario: form.id_usuario, fecha_suscripcion: new Date() });
+        setForm({ id_curso: form.id_curso, id_usuario: form.id_usuario, fecha_suscripcion: new Date() });
     };
 
     // Maneja suscripción al curso
@@ -168,9 +168,7 @@ export const SubForm: React.FC<Props> = ({ initialData = {}, cursos, onSubmit, c
             </div>
 
             <div className="button-group">
-                <button type="submit" className="btn-primary">
-                    Guardar suscripción
-                </button>
+                
                 <button
                     type="button"
                     onClick={handleSuscribir}

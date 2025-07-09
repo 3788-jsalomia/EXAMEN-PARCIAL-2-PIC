@@ -1,6 +1,10 @@
 const API_URL = "http://localhost:3000/api/suscripciones";
 
 export const suscribirCurso = async (idUsuario: number, idCurso: number) => {
+    if (!idUsuario || !idCurso) {
+        throw new Error("ID de usuario o curso inválido");
+    }
+    console.log("Suscribiendo usuario:", idUsuario, "al curso:", idCurso);
     const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
